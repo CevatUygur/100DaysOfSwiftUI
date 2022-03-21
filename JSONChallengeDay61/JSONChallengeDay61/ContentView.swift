@@ -42,8 +42,8 @@ struct ContentView: View {
                                 Text("Age: \(user.age)")
                                     .padding(.vertical, 5)
 
-                                Text("Active: \(user.isActive ? "Yes" : "No")")
-                                    .padding(.vertical, 5)
+//                                Text("Active: \(user.isActive ? "Yes" : "No")")
+//                                    .padding(.vertical, 5)
 
 //                                Text("Company: \(user.company)")
 //                                    .padding(.vertical, 5)
