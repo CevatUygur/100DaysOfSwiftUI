@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDFriend" representedClassName=".CDFriend" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="friendOrigin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="friend" inverseEntity="CDUser"/>
+    </entity>
+    <entity name="CDTag" representedClassName=".CDTag" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="tagOrigin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="tag" inverseEntity="CDUser"/>
+    </entity>
+    <entity name="CDUser" representedClassName=".CDUser" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="Binary"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="registered" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="friend" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFriend" inverseName="friendOrigin" inverseEntity="CDFriend"/>
+        <relationship name="tag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDTag" inverseName="tagOrigin" inverseEntity="CDTag"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CDFriend" positionX="-63" positionY="-18" width="128" height="14"/>
+        <element name="CDUser" positionX="-45" positionY="27" width="128" height="209"/>
+        <element name="CDTag" positionX="-27" positionY="36" width="128" height="59"/>
+    </elements>
+</model>
