@@ -12,3 +12,5 @@
 
 * [WordScramble](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/WordScramble)
 
+* [WeSplit](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/WeSplit)
+
