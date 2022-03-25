@@ -10,4 +10,5 @@
 
 * [Moonshot](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Moonshot)
 
+* [WordScramble](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/WordScramble)
 
