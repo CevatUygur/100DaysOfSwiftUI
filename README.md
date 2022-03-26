@@ -1,8 +1,8 @@
 # SwiftUIDesignProjects
 
-* [Better Rest](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/BetterRest)
+* [BetterRest](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/BetterRest)
 
-* [Cupcake Corner](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/CupcakeCorner)
+* [CupcakeCorner](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/CupcakeCorner)
 
 * [Edutainment](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Edutainment)
 
@@ -15,4 +15,8 @@
 * [WeSplit](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/WeSplit)
 
 * [IExpense](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/iExpense)
+
+* [Bookworm](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Bookworm)
+
+* [GuessTheFlag](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/GuessTheFlag)
 
