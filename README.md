@@ -23,3 +23,5 @@
 * [RockPaperScissors](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/RockPaperScissors)
 
 * [CoreDataProject](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/CoreDataProject)
+
+* [Instafilter](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Instafilter)
