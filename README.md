@@ -25,3 +25,5 @@
 * [CoreDataProject](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/CoreDataProject)
 
 * [Instafilter](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Instafilter)
+
+* [BucketList](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/BucketList)
