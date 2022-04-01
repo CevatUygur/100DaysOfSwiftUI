@@ -63,8 +63,8 @@
 			children = (
 				CFA3AC4E27F6C58300F0CC9E /* BucketListApp.swift */,
 				CFA3AC5027F6C58300F0CC9E /* ContentView.swift */,
-				CF3C2C5927F796FF00CC363F /* FileManager-DocumentsDirectory.swift */,
 				CF3C2C5727F792ED00CC363F /* ContentView-ViewModel.swift */,
+				CF3C2C5927F796FF00CC363F /* FileManager-DocumentsDirectory.swift */,
 				CF3C2C5527F789CC00CC363F /* Result.swift */,
 				CF3C2C5327F76C2B00CC363F /* EditView.swift */,
 				CF3C2C5127F7607B00CC363F /* Location.swift */,
@@ -290,7 +290,7 @@
 				DEVELOPMENT_TEAM = NKA7PWRC7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself o unlock yoru places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,7 +320,7 @@
 				DEVELOPMENT_TEAM = NKA7PWRC7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself o unlock yoru places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
