@@ -11,6 +11,8 @@
 		CF0A81F127FCBBED002590EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A81F027FCBBED002590EA /* ContentView.swift */; };
 		CF0A81F327FCBBEE002590EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0A81F227FCBBEE002590EA /* Assets.xcassets */; };
 		CF0A81F627FCBBEE002590EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0A81F527FCBBEE002590EA /* Preview Assets.xcassets */; };
+		CF7141F127FE6B3A0066C66A /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7141F027FE6B3A0066C66A /* ProspectsView.swift */; };
+		CF7141F327FE6B460066C66A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7141F227FE6B460066C66A /* MeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CF0A81F027FCBBED002590EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF0A81F227FCBBEE002590EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF0A81F527FCBBEE002590EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF7141F027FE6B3A0066C66A /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		CF7141F227FE6B460066C66A /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				CF0A81EE27FCBBED002590EA /* HotProspectsApp.swift */,
 				CF0A81F027FCBBED002590EA /* ContentView.swift */,
+				CF7141F027FE6B3A0066C66A /* ProspectsView.swift */,
+				CF7141F227FE6B460066C66A /* MeView.swift */,
 				CF0A81F227FCBBEE002590EA /* Assets.xcassets */,
 				CF0A81F427FCBBEE002590EA /* Preview Content */,
 			);
@@ -83,6 +89,8 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+			);
 			productName = HotProspects;
 			productReference = CF0A81EB27FCBBED002590EA /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,8 @@
 				Base,
 			);
 			mainGroup = CF0A81E227FCBBED002590EA;
+			packageReferences = (
+			);
 			productRefGroup = CF0A81EC27FCBBED002590EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7141F327FE6B460066C66A /* MeView.swift in Sources */,
+				CF7141F127FE6B3A0066C66A /* ProspectsView.swift in Sources */,
 				CF0A81F127FCBBED002590EA /* ContentView.swift in Sources */,
 				CF0A81EF27FCBBED002590EA /* HotProspectsApp.swift in Sources */,
 			);
