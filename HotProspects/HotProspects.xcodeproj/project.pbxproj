@@ -14,6 +14,7 @@
 		CF7141F127FE6B3A0066C66A /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7141F027FE6B3A0066C66A /* ProspectsView.swift */; };
 		CF7141F327FE6B460066C66A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7141F227FE6B460066C66A /* MeView.swift */; };
 		CF7141F527FE6E9B0066C66A /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7141F427FE6E9B0066C66A /* Prospect.swift */; };
+		CF7141F827FE7DF00066C66A /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CF7141F727FE7DF00066C66A /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7141F827FE7DF00066C66A /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,7 @@
 			);
 			name = HotProspects;
 			packageProductDependencies = (
+				CF7141F727FE7DF00066C66A /* CodeScanner */,
 			);
 			productName = HotProspects;
 			productReference = CF0A81EB27FCBBED002590EA /* HotProspects.app */;
@@ -123,6 +126,7 @@
 			);
 			mainGroup = CF0A81E227FCBBED002590EA;
 			packageReferences = (
+				CF7141F627FE7DF00066C66A /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = CF0A81EC27FCBBED002590EA /* Products */;
 			projectDirPath = "";
@@ -286,6 +290,7 @@
 				DEVELOPMENT_TEAM = NKA7PWRC7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -315,6 +320,7 @@
 				DEVELOPMENT_TEAM = NKA7PWRC7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF7141F627FE7DF00066C66A /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF7141F727FE7DF00066C66A /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF7141F627FE7DF00066C66A /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF0A81E327FCBBED002590EA /* Project object */;
 }
