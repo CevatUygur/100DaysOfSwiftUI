@@ -25,10 +25,21 @@ struct ProspectsView: View {
             List {
                 ForEach(filteredProspects) { prospect in
                     VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                        HStack {
+                            if prospect.isContacted {
+                                Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                                    .foregroundColor(.green)
+                            } else {
+                                Image(systemName: "person.crop.circle.badge.xmark")
+                                    .foregroundColor(.blue)
+                            }
+                            VStack(alignment: .leading){
+                                Text(prospect.name)
+                                    .font(.headline)
+                                Text(prospect.emailAddress)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
                     }
                     .swipeActions {
                         if prospect.isContacted {
