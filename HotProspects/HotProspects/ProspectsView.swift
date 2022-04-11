@@ -16,14 +16,19 @@ struct ProspectsView: View {
     }
     
     @EnvironmentObject var prospects: Prospects
+    @State private var prospectsArray = [Prospect]()
+    
     @State private var isShowingScanner = false
+    @State private var showingConfirmation = false
+    @State private var sortedByName = false
+    @State private var sortedByEmail = false
     
     let filter: FilterType
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(filteredProspects) { prospect in
+                ForEach(sortedProspects(prospectsArray)) { prospect in
                     VStack(alignment: .leading) {
                         HStack {
                             if prospect.isContacted {
@@ -39,6 +44,7 @@ struct ProspectsView: View {
                                 Text(prospect.emailAddress)
                                     .foregroundColor(.secondary)
                             }
+                            .padding(.horizontal, 5)
                         }
                     }
                     .swipeActions {
@@ -68,15 +74,23 @@ struct ProspectsView: View {
                 }
             }
             .navigationTitle(title)
-            .toolbar {
-                Button {
-                    isShowingScanner = true
-                } label: {
-                    Label("Scan", systemImage: "qrcode.viewfinder")
-                }
-            }
+            .navigationBarItems(leading: Button {
+                showingConfirmation = true
+            } label: {
+                Label("Sort", systemImage: "arrow.up.arrow.down.square")
+            }, trailing: Button {
+                isShowingScanner = true
+            } label: {
+                Label("Scan", systemImage: "qrcode.viewfinder")
+            })
             .sheet(isPresented: $isShowingScanner) {
                 CodeScannerView(codeTypes: [.qr], simulatedData: "Cevat Uygur\ncevatugur@gmail.com", completion: handleScan)
+            }
+            .confirmationDialog("Sort", isPresented: $showingConfirmation) {
+                Button("Name") { sortedByName = true; sortedByEmail = false }
+                Button("Email") { sortedByEmail = true; sortedByName = false }
+            } message: {
+                Text("Sort by...")
             }
         }
     }
@@ -100,6 +114,20 @@ struct ProspectsView: View {
             return prospects.people.filter { $0.isContacted }
         case .uncontacted:
             return prospects.people.filter { !$0.isContacted }
+        }
+    }
+    
+    func sortedProspects(_ array: [Prospect]) -> [Prospect] {
+        var array = prospectsArray
+        if sortedByName {
+            array = filteredProspects.sorted {$0.name < $1.name}
+            return array
+        } else if sortedByEmail {
+            array = filteredProspects.sorted {$0.emailAddress < $1.emailAddress}
+            return array
+        } else {
+            array = filteredProspects
+            return array
         }
     }
     
