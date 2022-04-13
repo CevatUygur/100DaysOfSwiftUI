@@ -33,3 +33,5 @@
 * [PhotoList](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/PhotoList)
 
 * [HotProspects](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/HotProspects)
+
+* [Flashzilla](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Flashzilla)
