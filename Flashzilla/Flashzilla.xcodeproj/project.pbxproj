@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1CC7A7280A0F3A005FF5EC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CC7A6280A0F3A005FF5EC /* Card.swift */; };
+		CF1CC7A9280A1033005FF5EC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CC7A8280A1033005FF5EC /* CardView.swift */; };
 		CF9193E728076F63002B90FA /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9193E628076F63002B90FA /* FlashzillaApp.swift */; };
 		CF9193E928076F63002B90FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9193E828076F63002B90FA /* ContentView.swift */; };
 		CF9193EB28076F64002B90FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9193EA28076F64002B90FA /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF1CC7A6280A0F3A005FF5EC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CF1CC7A8280A1033005FF5EC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CF9193E328076F63002B90FA /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9193E628076F63002B90FA /* FlashzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaApp.swift; sourceTree = "<group>"; };
 		CF9193E828076F63002B90FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +39,7 @@
 		CF9193DA28076F63002B90FA = {
 			isa = PBXGroup;
 			children = (
+				CF1CC7A8280A1033005FF5EC /* CardView.swift */,
 				CF9193E528076F63002B90FA /* Flashzilla */,
 				CF9193E428076F63002B90FA /* Products */,
 			);
@@ -53,6 +58,7 @@
 			children = (
 				CF9193E628076F63002B90FA /* FlashzillaApp.swift */,
 				CF9193E828076F63002B90FA /* ContentView.swift */,
+				CF1CC7A6280A0F3A005FF5EC /* Card.swift */,
 				CF9193EA28076F64002B90FA /* Assets.xcassets */,
 				CF9193EC28076F64002B90FA /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF9193E928076F63002B90FA /* ContentView.swift in Sources */,
+				CF1CC7A7280A0F3A005FF5EC /* Card.swift in Sources */,
+				CF1CC7A9280A1033005FF5EC /* CardView.swift in Sources */,
 				CF9193E728076F63002B90FA /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +282,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,7 +311,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

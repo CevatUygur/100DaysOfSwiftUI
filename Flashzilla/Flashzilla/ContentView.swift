@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Flashzilla")
-            .padding()
+        CardView(card: Card.example)
     }
 }
 
