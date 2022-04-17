@@ -11,6 +11,8 @@ struct CardView: View {
     let card: Card
     var removal: (() -> Void)? = nil
     
+    @State private var feedback = UINotificationFeedbackGenerator()
+    
     @Environment(\._accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
@@ -51,10 +53,13 @@ struct CardView: View {
             DragGesture()
                 .onChanged { gesture in
                     offset = gesture.translation
+                    feedback.prepare()
                 }
                 .onEnded { gesture in
                     if abs(offset.width) > 100 {
-                        //remove the card
+                        if offset.width < 0 {
+                            feedback.notificationOccurred(.error)
+                        }
                         removal?()
                     } else {
                         offset = .zero
@@ -73,5 +78,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(card: Card.example)
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

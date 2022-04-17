@@ -39,7 +39,6 @@
 		CF9193DA28076F63002B90FA = {
 			isa = PBXGroup;
 			children = (
-				CF1CC7A8280A1033005FF5EC /* CardView.swift */,
 				CF9193E528076F63002B90FA /* Flashzilla */,
 				CF9193E428076F63002B90FA /* Products */,
 			);
@@ -58,6 +57,7 @@
 			children = (
 				CF9193E628076F63002B90FA /* FlashzillaApp.swift */,
 				CF9193E828076F63002B90FA /* ContentView.swift */,
+				CF1CC7A8280A1033005FF5EC /* CardView.swift */,
 				CF1CC7A6280A0F3A005FF5EC /* Card.swift */,
 				CF9193EA28076F64002B90FA /* Assets.xcassets */,
 				CF9193EC28076F64002B90FA /* Preview Content */,
