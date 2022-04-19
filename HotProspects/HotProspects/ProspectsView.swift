@@ -15,36 +15,33 @@ struct ProspectsView: View {
         case none, contacted, uncontacted
     }
     
-    @EnvironmentObject var prospects: Prospects
-    @State private var prospectsArray = [Prospect]()
+    enum SortType {
+        case name, date
+    }
     
+    @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
-    @State private var showingConfirmation = false
-    @State private var sortedByName = false
-    @State private var sortedByEmail = false
+    @State private var sortOrder = SortType.date
+    
+    @State private var isShowingSortOptions = false
     
     let filter: FilterType
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(sortedProspects(prospectsArray)) { prospect in
-                    VStack(alignment: .leading) {
-                        HStack {
-                            if prospect.isContacted {
-                                Image(systemName: "person.crop.circle.fill.badge.checkmark")
-                                    .foregroundColor(.green)
-                            } else {
-                                Image(systemName: "person.crop.circle.badge.xmark")
-                                    .foregroundColor(.blue)
-                            }
-                            VStack(alignment: .leading){
-                                Text(prospect.name)
-                                    .font(.headline)
-                                Text(prospect.emailAddress)
-                                    .foregroundColor(.secondary)
-                            }
-                            .padding(.horizontal, 5)
+                ForEach(filteredProspects) { prospect in
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        if prospect.isContacted && filter == .none {
+                            Spacer()
+                            Image(systemName: "checkmark.circle.fill")
                         }
                     }
                     .swipeActions {
@@ -75,22 +72,20 @@ struct ProspectsView: View {
             }
             .navigationTitle(title)
             .navigationBarItems(leading: Button {
-                showingConfirmation = true
+                isShowingSortOptions = true
             } label: {
-                Label("Sort", systemImage: "arrow.up.arrow.down.square")
+                Label("Sort", systemImage: "arrow.up.arrow.down")
             }, trailing: Button {
                 isShowingScanner = true
             } label: {
                 Label("Scan", systemImage: "qrcode.viewfinder")
             })
-            .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Cevat Uygur\ncevatugur@gmail.com", completion: handleScan)
+            .confirmationDialog("Sort By...", isPresented: $isShowingSortOptions) {
+                Button("Name (A-Z)") { sortOrder = .name}
+                Button("Date (Newest first)") { sortOrder = .date}
             }
-            .confirmationDialog("Sort", isPresented: $showingConfirmation) {
-                Button("Name") { sortedByName = true; sortedByEmail = false }
-                Button("Email") { sortedByEmail = true; sortedByName = false }
-            } message: {
-                Text("Sort by...")
+            .sheet(isPresented: $isShowingScanner) {
+                CodeScannerView(codeTypes: [.qr], simulatedData: "Cevat Uygur\ncevatuygur@gmail.com", completion: handleScan)
             }
         }
     }
@@ -107,27 +102,21 @@ struct ProspectsView: View {
     }
     
     var filteredProspects : [Prospect] {
+        let result: [Prospect]
+        
         switch filter {
         case .none:
-            return prospects.people
+            result = prospects.people
         case .contacted:
-            return prospects.people.filter { $0.isContacted }
+            result = prospects.people.filter { $0.isContacted }
         case .uncontacted:
-            return prospects.people.filter { !$0.isContacted }
+            result = prospects.people.filter { !$0.isContacted }
         }
-    }
-    
-    func sortedProspects(_ array: [Prospect]) -> [Prospect] {
-        var array = prospectsArray
-        if sortedByName {
-            array = filteredProspects.sorted {$0.name < $1.name}
-            return array
-        } else if sortedByEmail {
-            array = filteredProspects.sorted {$0.emailAddress < $1.emailAddress}
-            return array
+        
+        if sortOrder == .name {
+            return result.sorted { $0.name < $1.name }
         } else {
-            array = filteredProspects
-            return array
+            return result.reversed()
         }
     }
     
