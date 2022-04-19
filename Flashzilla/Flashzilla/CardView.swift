@@ -7,9 +7,21 @@
 
 import SwiftUI
 
+extension Shape {
+    func fill(using offset: CGSize) -> some View {
+        if offset.width == 0 {
+            return self.fill(.white)
+        } else if offset.width < 0 {
+            return self.fill(.red)
+        } else {
+            return self.fill(.green)
+        }
+    }
+}
+
 struct CardView: View {
     let card: Card
-    var removal: (() -> Void)? = nil
+    var removal: ((Bool) -> Void)? = nil
     
     @State private var feedback = UINotificationFeedbackGenerator()
     
@@ -28,7 +40,7 @@ struct CardView: View {
                     differentiateWithoutColor
                     ? nil
                     : RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(offset.width > 0 ? .green : .red)
+                        .fill(using: offset)
                 )
                 .shadow(radius: 10)
             
@@ -67,10 +79,13 @@ struct CardView: View {
                 }
                 .onEnded { gesture in
                     if abs(offset.width) > 100 {
-                        if offset.width < 0 {
+                        if offset.width > 0 {
+                            removal?(false)
+                        } else if offset.width < 0 {
                             feedback.notificationOccurred(.error)
+                            removal?(true)
+                            offset = .zero
                         }
-                        removal?()
                     } else {
                         offset = .zero
                     }
@@ -81,9 +96,7 @@ struct CardView: View {
             isShowingAnswer.toggle()
         }
         .animation(.spring(), value: offset)
-        
     }
-        
 }
 
 struct CardView_Previews: PreviewProvider {
