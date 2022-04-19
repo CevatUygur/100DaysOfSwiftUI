@@ -35,3 +35,6 @@
 * [HotProspects](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/HotProspects)
 
 * [Flashzilla](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Flashzilla)
+
+* [Friendface](https://github.com/CevatUygur/100DaysOfSwiftUI/tree/main/Friendface)
+
