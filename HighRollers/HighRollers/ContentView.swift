@@ -92,7 +92,6 @@ struct ContentView: View {
             save()
         } else {
             stoppedDice = Int.random(in: 5...25) * -1
-            
         }
     }
     
