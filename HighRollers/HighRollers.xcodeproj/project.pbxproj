@@ -12,6 +12,7 @@
 		CF135D77280FC62A00B85F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF135D76280FC62A00B85F37 /* Assets.xcassets */; };
 		CF135D7A280FC62A00B85F37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF135D79280FC62A00B85F37 /* Preview Assets.xcassets */; };
 		CF135D81280FC66100B85F37 /* DiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF135D80280FC66100B85F37 /* DiceResult.swift */; };
+		CF135D83280FDB8900B85F37 /* FileManager-DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF135D82280FDB8900B85F37 /* FileManager-DocumentDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		CF135D76280FC62A00B85F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF135D79280FC62A00B85F37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF135D80280FC66100B85F37 /* DiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceResult.swift; sourceTree = "<group>"; };
+		CF135D82280FDB8900B85F37 /* FileManager-DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				CF135D72280FC62800B85F37 /* HighRollersApp.swift */,
 				CF135D74280FC62800B85F37 /* ContentView.swift */,
+				CF135D82280FDB8900B85F37 /* FileManager-DocumentDirectory.swift */,
 				CF135D80280FC66100B85F37 /* DiceResult.swift */,
 				CF135D76280FC62A00B85F37 /* Assets.xcassets */,
 				CF135D78280FC62A00B85F37 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				CF135D75280FC62800B85F37 /* ContentView.swift in Sources */,
 				CF135D81280FC66100B85F37 /* DiceResult.swift in Sources */,
+				CF135D83280FDB8900B85F37 /* FileManager-DocumentDirectory.swift in Sources */,
 				CF135D73280FC62800B85F37 /* HighRollersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
