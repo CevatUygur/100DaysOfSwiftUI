@@ -11,9 +11,11 @@ import SwiftUI
 class Favorites: ObservableObject {
     private var resorts: Set<String>
     private let saveKey = "Favorites"
+    let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedData")
     
     init() {
         //load out saved data
+        
         resorts = []
     }
     
@@ -35,5 +37,6 @@ class Favorites: ObservableObject {
     
     func save() {
         //
+        
     }
 }
